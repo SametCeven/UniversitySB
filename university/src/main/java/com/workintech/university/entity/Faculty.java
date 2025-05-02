@@ -1,5 +1,6 @@
 package com.workintech.university.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -36,6 +37,7 @@ public class Faculty {
 
     @Size(max = 20)
     @Column(name = "phone_number")
+    @JsonProperty("phone_number")
     private String phoneNumber;
 
     @Size(max = 100)
